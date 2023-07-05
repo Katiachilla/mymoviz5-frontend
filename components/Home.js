@@ -14,7 +14,7 @@ function Home() {
       .then(response => response.json())
       .then(data => {
         console.log('data',data.movies[0].results[0])
-        setMovies(data.movies[0].results);
+        setMovies(data.movies);
        
       });
   }, []);
