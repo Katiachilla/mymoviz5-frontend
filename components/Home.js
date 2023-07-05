@@ -57,7 +57,7 @@ function Home() {
     key={i} 
     updateLikedMovies={updateLikedMovies} 
     isLiked={isLiked} 
-    title={data.title} 
+    title={data.original_title} 
     overview={data.overview.length > 250 ? data.overview.substring(0, 250) + '...' : data.overview}//(data)=>{if (data.overview.length>250){data.overview.splice(0,250)}}} 
     poster={data.poster_path} 
     voteAverage={data.vote_average} 
