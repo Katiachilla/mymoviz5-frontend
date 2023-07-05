@@ -8,12 +8,12 @@ import styles from '../styles/Home.module.css';
 
 function Home() {
   const [likedMovies, setLikedMovies] = useState([]);
-  const [moviesData, setMovies] = useState([]);
+  const [moviesData, setMoviesData] = useState([]);
   useEffect(() => {
     fetch('https://mymoviz5-backend-ten.vercel.app/movies')
       .then(response => response.json())
       .then(data => {
-        setMovies(data.movies);
+        setMoviesData(data.movies);
        
       });
   }, []);
