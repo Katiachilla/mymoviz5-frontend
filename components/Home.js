@@ -52,7 +52,7 @@ function Home() {
   // ];
   
   const movies = moviesData.map((data, i) => {
-    const isLiked = likedMovies.some(movie => movie === data.title);
+    const isLiked = likedMovies.some(movie => movie === data.original_title);
     return <Movie 
     key={i} 
     updateLikedMovies={updateLikedMovies} 
@@ -60,8 +60,8 @@ function Home() {
     title={data.title} 
     overview={data.overview.length > 250 ? data.overview.substring(0, 250) + '...' : data.overview}//(data)=>{if (data.overview.length>250){data.overview.splice(0,250)}}} 
     poster={data.poster_path} 
-    voteAverage={data.voteAverage} 
-    voteCount={data.voteCount} />;
+    voteAverage={data.vote_average} 
+    voteCount={data.vote_count} />;
   });
   
   
